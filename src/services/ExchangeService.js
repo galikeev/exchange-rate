@@ -7,7 +7,8 @@ const useExchangeService = () => {
 
     const getCurrencies = async () => {
         const res = await request(`${_baseApi}`);
-        return res.Valute;
+        const arrayOfObj = Object.values(res.Valute);
+        return arrayOfObj;
     }
 
     return {
