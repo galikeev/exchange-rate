@@ -1,9 +1,9 @@
-import '../../style/style.scss';
+import CurrencyPage from '../../pages/CurrencyPage';
 
 const App = () => {
 	return (
-		<div className="App">
-			
+		<div className="app">
+			<CurrencyPage/>
 		</div>
 	);
 }
