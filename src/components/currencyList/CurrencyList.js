@@ -1,3 +1,5 @@
+import ReactTooltip from 'react-tooltip';
+
 import './currencyList.scss';
 
 const CurrencyList = ({NumCode, CharCode, Nominal, Name, Value, Previous}) => {
@@ -6,7 +8,8 @@ const CurrencyList = ({NumCode, CharCode, Nominal, Name, Value, Previous}) => {
     const colorPercent = percent > 0 ? {'color': 'green'} : {'color': 'red'};
 
     return (
-        <div className='currency__wrapper'>
+        <div className='currency__wrapper' data-tip={Name}>
+            <ReactTooltip />
             <div className='currency__item'>{CharCode}</div>
             <div className='currency__item'>{Value.toFixed(2)} руб</div>
             <div className='currency__item'>{Previous.toFixed(2)} руб</div>
