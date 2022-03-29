@@ -49,9 +49,9 @@ const CurrencyPage = () => {
             )
         });
         return (
-            <div>
+            <>
                 {elems}
-            </div>
+            </>
         )
     }
 
@@ -61,7 +61,13 @@ const CurrencyPage = () => {
     }, [process]);
 
     return (
-        <div>
+        <div className="currency">
+            <div className="currency__name">
+                <div>валюта</div>
+                <div>сегодня</div>
+                <div>вчера</div>
+                <div>%</div>
+            </div>
             {elements}
         </div>
     );
